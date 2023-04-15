@@ -14,6 +14,10 @@ config/name="godot-project"
 run/main_scene="res://gameplay/main/main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+music="*res://globals/music/music.tscn"
+
 [display]
 
 window/size/width=1920

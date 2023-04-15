@@ -3,6 +3,13 @@ extends KinematicBody2D
 
 export var speed = 500
 var can_swap = true
+var current_identity_index = -1
+var original_glboal_position
+var looking_left = true
+
+func _ready():
+	original_glboal_position = global_position
+
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -16,24 +23,44 @@ func _process(delta):
 		velocity.y = -1
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y = 1
+
+	if looking_left and velocity.x > 0:
+		looking_left = false
+		apply_scale(Vector2(-1, 1))
+	elif not looking_left and velocity.x < 0:
+		looking_left = true
+		apply_scale(Vector2(-1, 1))
 		
 	var collision = move_and_collide(speed * velocity * delta)
-	if collision and collision.collider.is_in_group("npc") and can_swap:
+	if collision and collision.collider.is_in_group("npc"):
 		swap(collision.collider)
-		
+
+	
+
+
 func swap(npc):
-	print("SWAP")
-	var npc_sprite = npc.get_node("sprite")
-	var player_sprite = get_node("sprite")
-	
-	can_swap = false
-	$swap_timer.start()
-	npc.remove_child(npc_sprite)
-	remove_child(player_sprite)
-	
-	npc.add_child(player_sprite)
-	add_child(npc_sprite)
+	if can_swap:
+		can_swap = false
+		
+		var npc_sprite = npc.get_node("skeleton")
+		var player_sprite = get_node("skeleton")
+		
+		$swap_timer.start()
+		npc.remove_child(npc_sprite)
+		remove_child(player_sprite)
+		
+		npc.add_child(player_sprite)
+		add_child(npc_sprite)
+		
+		npc.go_back()
+		
+		current_identity_index = npc.get_index()
 
 
 func _on_timer_timeout():
 	can_swap = true
+
+
+func reset():
+	global_position = original_glboal_position
+	current_identity_index = -1
