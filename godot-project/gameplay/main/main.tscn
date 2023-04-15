@@ -54,8 +54,10 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="right_panel" parent="gui" instance=ExtResource( 6 )]
+margin_right = 1887.0
 
 [node name="game_over" parent="gui" instance=ExtResource( 7 )]
+visible = false
 
 [connection signal="right_identity_reached_door" from="door" to="." method="_on_door_right_identity_reached_door"]
 [connection signal="wrong_identity_reached_door" from="door" to="." method="_on_door_wrong_identity_reached_door"]
