@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://gameplay/door/door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gameplay/player/player.tscn" type="PackedScene" id=2]
@@ -7,25 +7,37 @@
 [ext_resource path="res://gameplay/wall/wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gameplay/gui/right_panel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://gameplay/gui/game_over/game_over.tscn" type="PackedScene" id=7]
+[ext_resource path="res://gameplay/main/background.png" type="Texture" id=8]
 
 [node name="main" type="Node"]
 script = ExtResource( 4 )
 
+[node name="backgrounds" type="Node2D" parent="."]
+
+[node name="background_01" type="Sprite" parent="backgrounds"]
+position = Vector2( 736.5, 541 )
+scale = Vector2( 0.766146, 1 )
+texture = ExtResource( 8 )
+
 [node name="left_wall" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 35, 515 )
 scale = Vector2( 1, 20 )
 
 [node name="top_wall" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 964, 16 )
 rotation = 1.5708
 scale = Vector2( 1, 30 )
 
 [node name="bottom_wall" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 964, 1048 )
 rotation = 1.5708
 scale = Vector2( 1, 30 )
 
 [node name="right_wall" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 1418, 515 )
 scale = Vector2( 1, 20 )
 
