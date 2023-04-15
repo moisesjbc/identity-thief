@@ -14,5 +14,8 @@ func _on_door_body_entered(body):
 			emit_signal("right_identity_reached_door")
 			$correct.play()
 		else:
+			print("DOOR CHECK")
+			print("body.current_identity_index ", body.current_identity_index)
+			print("target_identity_index ", target_identity_index)
 			emit_signal("wrong_identity_reached_door")
 			$wrong.play()

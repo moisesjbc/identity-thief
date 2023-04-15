@@ -5,6 +5,7 @@ var npc_scene = preload("res://gameplay/npc/npc.tscn")
 func reset(n_npcs):
 	for npc in get_children():
 		remove_child(npc)
+		npc.free()
 	
 	for i in range(0, n_npcs):
 		var npc = npc_scene.instance()

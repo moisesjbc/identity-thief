@@ -7,6 +7,7 @@ var current_identity_index = -1
 var original_glboal_position
 var looking_left = true
 
+
 func _ready():
 	original_glboal_position = global_position
 
@@ -55,6 +56,7 @@ func swap(npc):
 		npc.go_back()
 		
 		current_identity_index = npc.get_index()
+		print("SWAP to " + str(current_identity_index))
 
 
 func _on_timer_timeout():
