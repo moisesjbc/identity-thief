@@ -20,7 +20,8 @@ func _on_Start_pressed():
 	print("clic en el boton")
 	get_tree().change_scene("res://gameplay/main/main.tscn")	
 
-func _input(event):
-	if event is InputEventKey and event.scancode == KEY_SPACE and event.is_pressed():
-		print("space key pressed")
-		get_tree().change_scene("res://gameplay/main/main.tscn")	
+func _on_StartButton_pressed():
+	get_tree().change_scene("res://gameplay/main/main.tscn")	
+
+func _on_ExitButton_pressed():
+	get_tree().quit()
