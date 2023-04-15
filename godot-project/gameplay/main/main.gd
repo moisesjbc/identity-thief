@@ -3,16 +3,18 @@ extends Node
 
 var current_level = 0
 var target_identity_index = 0
-var current_total_time = 30
+var current_total_time = 10
 
 
 func _ready():
 	set_current_level(0)
 	get_tree().get_root().get_node("music").play_gameplay_music()
+	
 
 
 func set_current_level(new_level):
 	current_level = new_level
+	get_tree().get_root().get_node("statistics").n_levels = current_level
 
 	$npc_container.reset(5 + current_level)
 	target_identity_index = $npc_container.get_random_identity_index()

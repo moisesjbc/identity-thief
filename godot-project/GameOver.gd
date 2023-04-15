@@ -9,6 +9,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$police_siren.play()
+	print("n_levels " + str(get_tree().get_root().get_node("statistics").n_levels))
+	print("n_swaps " + str(get_tree().get_root().get_node("statistics").n_swaps))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

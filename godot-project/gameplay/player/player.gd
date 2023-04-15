@@ -56,6 +56,7 @@ func swap(npc):
 		npc.go_back()
 		
 		current_identity_index = npc.get_index()
+		get_tree().get_root().get_node("statistics").n_swaps = get_tree().get_root().get_node("statistics").n_swaps + 1
 		print("SWAP to " + str(current_identity_index))
 
 
