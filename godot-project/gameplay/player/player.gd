@@ -18,21 +18,25 @@ func _process(delta):
 		velocity.y = 1
 		
 	var collision = move_and_collide(speed * velocity * delta)
-	if collision and collision.collider.is_in_group("npc") and can_swap:
+	if collision and collision.collider.is_in_group("npc"):
 		swap(collision.collider)
-		
+
+
 func swap(npc):
-	print("SWAP")
-	var npc_sprite = npc.get_node("sprite")
-	var player_sprite = get_node("sprite")
-	
-	can_swap = false
-	$swap_timer.start()
-	npc.remove_child(npc_sprite)
-	remove_child(player_sprite)
-	
-	npc.add_child(player_sprite)
-	add_child(npc_sprite)
+	if can_swap:
+		print("SWAP")
+		var npc_sprite = npc.get_node("sprite")
+		var player_sprite = get_node("sprite")
+		
+		can_swap = false
+		$swap_timer.start()
+		npc.remove_child(npc_sprite)
+		remove_child(player_sprite)
+		
+		npc.add_child(player_sprite)
+		add_child(npc_sprite)
+		
+		npc.go_back()
 
 
 func _on_timer_timeout():

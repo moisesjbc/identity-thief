@@ -17,9 +17,14 @@ func _ready():
 	velocity.y = -50 + randi() % 100
 	$sprite.modulate = colors[randi() % len(colors)]
 
-
 func _process(delta):
 	var collision = move_and_collide(speed * velocity.normalized() * delta)
-	if collision and collision.collider.is_in_group("walls"):
-		velocity.x = -velocity.x
-		velocity.y = -velocity.y
+	if collision:
+		go_back()
+		if collision.collider.is_in_group("player"):
+			collision.collider.swap(self)
+
+
+func go_back():
+	velocity.x = -velocity.x
+	velocity.y = -velocity.y
