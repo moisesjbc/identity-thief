@@ -62,5 +62,5 @@ texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 5 )
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_TextureButton_pressed"]

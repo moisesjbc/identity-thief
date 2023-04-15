@@ -40,11 +40,13 @@ func _process(delta):
 func swap(npc):
 	if can_swap:
 		can_swap = false
+		$swap_timer.start()
+		$oof.play()
 		
 		var npc_sprite = npc.get_node("skeleton")
 		var player_sprite = get_node("skeleton")
 		
-		$swap_timer.start()
+		
 		npc.remove_child(npc_sprite)
 		remove_child(player_sprite)
 		

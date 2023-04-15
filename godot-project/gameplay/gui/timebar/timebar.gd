@@ -15,4 +15,5 @@ func _process(delta):
 	current_time -= delta
 	$slider.value = (current_time / total_time) * 100
 	if $slider.value <= 0:
+		$siren.play()
 		emit_signal("timeout")
