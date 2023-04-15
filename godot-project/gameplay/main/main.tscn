@@ -23,7 +23,7 @@ rotation = 1.5708
 scale = Vector2( 1, 30 )
 
 [node name="right_wall" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1890, 515 )
+position = Vector2( 1418, 515 )
 scale = Vector2( 1, 20 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
@@ -32,13 +32,41 @@ position = Vector2( 670, 392 )
 [node name="npc_containers" type="Node2D" parent="."]
 
 [node name="npc" parent="npc_containers" instance=ExtResource( 3 )]
-position = Vector2( 1284, 227 )
+position = Vector2( 295, 439 )
 
 [node name="npc2" parent="npc_containers" instance=ExtResource( 3 )]
 position = Vector2( 652, 140 )
 
 [node name="npc3" parent="npc_containers" instance=ExtResource( 3 )]
-position = Vector2( 1601, 634 )
+position = Vector2( 1033, 627 )
 
 [node name="npc4" parent="npc_containers" instance=ExtResource( 3 )]
 position = Vector2( 669, 859 )
+
+[node name="gui" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="gui"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1432.0
+margin_right = 1938.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 200, 1080 )
+
+[node name="margin_container" type="MarginContainer" parent="gui/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="vbox_container" type="VBoxContainer" parent="gui/Panel/margin_container"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 456.0
+margin_bottom = 1030.0
