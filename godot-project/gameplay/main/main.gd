@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 
 var current_level = 0
@@ -21,6 +21,8 @@ func set_current_level(new_level):
 func _on_door_player_reached_door():
 	if $player.current_identity_index == target_identity_index:
 		set_next_level()
+	else:
+		$gui/game_over.start()
 
 
 func set_next_level():
