@@ -15,11 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Start_pressed():
-	print("clic en el boton")
-	get_tree().change_scene("res://gameplay/main/main.tscn")	
-
 func _on_StartButton_pressed():
 	get_tree().change_scene("res://gameplay/main/main.tscn")	
 
