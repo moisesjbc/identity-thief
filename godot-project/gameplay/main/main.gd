@@ -3,6 +3,7 @@ extends Node
 
 var current_level = 0
 var target_identity_index = 0
+var current_total_time = 10
 
 
 func _ready():
@@ -17,6 +18,7 @@ func set_current_level(new_level):
 	$gui/right_panel.reset(current_level, target_identity_skeleton)
 	$player.reset()
 	$door.reset(target_identity_index)
+	$gui/timebar.reset(current_total_time)
 
 
 func set_next_level():
@@ -27,5 +29,6 @@ func _on_door_right_identity_reached_door():
 	set_next_level()
 
 
-func _on_door_wrong_identity_reached_door():
+func _on_timebar_timeout():
+	print("GAMEOVER")
 	$gui/game_over.start()

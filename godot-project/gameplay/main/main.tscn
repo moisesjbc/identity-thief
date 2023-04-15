@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://gameplay/door/door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gameplay/player/player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://gameplay/gui/right_panel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://gameplay/gui/game_over/game_over.tscn" type="PackedScene" id=7]
 [ext_resource path="res://gameplay/main/background.png" type="Texture" id=8]
+[ext_resource path="res://gameplay/gui/timebar/timebar.tscn" type="PackedScene" id=9]
 
 [node name="main" type="Node"]
 script = ExtResource( 4 )
@@ -54,10 +55,15 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="right_panel" parent="gui" instance=ExtResource( 6 )]
-margin_right = 1887.0
+margin_left = 1437.0
+margin_right = 1882.0
 
 [node name="game_over" parent="gui" instance=ExtResource( 7 )]
 visible = false
 
+[node name="timebar" parent="gui" instance=ExtResource( 9 )]
+position = Vector2( 1496, 931 )
+
 [connection signal="right_identity_reached_door" from="door" to="." method="_on_door_right_identity_reached_door"]
 [connection signal="wrong_identity_reached_door" from="door" to="." method="_on_door_wrong_identity_reached_door"]
+[connection signal="timeout" from="gui/timebar" to="." method="_on_timebar_timeout"]
