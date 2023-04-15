@@ -5,8 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="npc" type="KinematicBody2D"]
-modulate = Color( 0.709804, 0.184314, 0.184314, 1 )
+[node name="npc" type="KinematicBody2D" groups=["npc"]]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource( 2 )
@@ -15,4 +14,5 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
 texture = ExtResource( 1 )

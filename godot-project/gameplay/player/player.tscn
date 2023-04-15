@@ -16,3 +16,15 @@ shape = SubResource( 1 )
 
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+
+[node name="swap_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="text" type="Label" parent="."]
+margin_left = -23.0
+margin_top = -49.0
+margin_right = 23.0
+margin_bottom = -35.0
+text = "PLAYER"
+
+[connection signal="timeout" from="swap_timer" to="." method="_on_timer_timeout"]
