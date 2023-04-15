@@ -19,8 +19,10 @@ func _ready():
 
 
 func _on_HomeButton_pressed():
+	get_tree().get_root().get_node("music").play_button_select()
 	get_tree().change_scene("res://menu/menu.tscn")
 
 
 func _on_RestartButton_pressed():
+	get_tree().get_root().get_node("music").play_button_select()
 	get_tree().change_scene("res://gameplay/main/main.tscn")

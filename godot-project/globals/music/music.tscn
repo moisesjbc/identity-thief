@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://globals/music/menu.ogg" type="AudioStream" id=1]
 [ext_resource path="res://globals/music/gameplay.ogg" type="AudioStream" id=2]
 [ext_resource path="res://globals/music/music.gd" type="Script" id=3]
+[ext_resource path="res://globals/music/select.wav" type="AudioStream" id=4]
 
 [node name="music" type="Node"]
 script = ExtResource( 3 )
@@ -12,6 +13,9 @@ stream = ExtResource( 1 )
 volume_db = 10.0
 bus = "Music"
 
-
 [node name="gameplay" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+
+[node name="button_select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "SFX"
