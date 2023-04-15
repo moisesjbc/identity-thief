@@ -24,6 +24,7 @@ func set_current_level(new_level):
 	$player.reset()
 	$door.reset(target_identity_index)
 	$gui/timebar.reset(current_total_time)
+	$backgrounds.reset(current_level)
 
 
 func set_next_level():
