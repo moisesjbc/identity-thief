@@ -8,8 +8,7 @@ func _ready():
 	print("NPC READY")
 	randomize()
 	
-	velocity.x = -50 + randi() % 100
-	velocity.y = -50 + randi() % 100
+	set_direction()
 
 func _process(delta):
 	var collision = move_and_collide(speed * velocity.normalized() * delta)
@@ -28,5 +27,10 @@ func _process(delta):
 
 
 func go_back():
-	velocity.x = -velocity.x
-	velocity.y = -velocity.y
+	set_direction()
+
+func set_direction():
+	velocity.x = -50 + randi() % 100
+	velocity.y = -50 + randi() % 100
+##	velocity.x = -velocity.x
+##	velocity.y = -velocity.y
