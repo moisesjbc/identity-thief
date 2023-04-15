@@ -16,7 +16,7 @@ arcade, por su rapidez y facilidad a la hora de de
 # idea
 live box evento predeterminado
 
-lpersonalizacion a personajes
+personalizacion a personajes
     monetizacion
 
 tematicas temporales
