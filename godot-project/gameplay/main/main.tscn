@@ -45,4 +45,5 @@ margin_bottom = 40.0
 
 [node name="game_over" parent="gui" instance=ExtResource( 7 )]
 
-[connection signal="player_reached_door" from="door" to="." method="_on_door_player_reached_door"]
+[connection signal="right_identity_reached_door" from="door" to="." method="_on_door_right_identity_reached_door"]
+[connection signal="wrong_identity_reached_door" from="door" to="." method="_on_door_wrong_identity_reached_door"]
