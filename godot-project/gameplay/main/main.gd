@@ -8,6 +8,7 @@ var current_total_time = 30
 
 func _ready():
 	set_current_level(0)
+	get_tree().get_root().get_node("music").play_gameplay_music()
 
 
 func set_current_level(new_level):
