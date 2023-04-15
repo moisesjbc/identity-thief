@@ -36,8 +36,6 @@ func _process(delta):
 	if collision and collision.collider.is_in_group("npc"):
 		swap(collision.collider)
 
-	
-
 
 func swap(npc):
 	if can_swap:

@@ -33,5 +33,4 @@ func _on_door_right_identity_reached_door():
 
 
 func _on_timebar_timeout():
-	print("GAMEOVER")
 	$gui/game_over.start()
