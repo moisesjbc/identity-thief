@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/police_siren.wav-b2a302da6292388e9eb459bd7b4cf4b3.sample"
+path="res://.import/police_siren.wav-512ac346d75f5c69043771266d79b78d.sample"
 
 [deps]
 
-source_file="res://gameplay/gui/timebar/police_siren.wav"
-dest_files=[ "res://.import/police_siren.wav-b2a302da6292388e9eb459bd7b4cf4b3.sample" ]
+source_file="res://game_over/police_siren.wav"
+dest_files=[ "res://.import/police_siren.wav-512ac346d75f5c69043771266d79b78d.sample" ]
 
 [params]
 

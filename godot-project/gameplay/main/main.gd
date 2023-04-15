@@ -3,7 +3,7 @@ extends Node
 
 var current_level = 0
 var target_identity_index = 0
-var current_total_time = 5
+var current_total_time = 30
 
 
 func _ready():
@@ -34,4 +34,4 @@ func _on_door_right_identity_reached_door():
 
 
 func _on_timebar_timeout():
-	$gui/game_over.start()
+	get_tree().change_scene("res://game_over/GameOver.tscn")
