@@ -29,5 +29,16 @@ scale = Vector2( 1, 20 )
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 670, 392 )
 
-[node name="npc" parent="." instance=ExtResource( 3 )]
+[node name="npc_containers" type="Node2D" parent="."]
+
+[node name="npc" parent="npc_containers" instance=ExtResource( 3 )]
 position = Vector2( 1284, 227 )
+
+[node name="npc2" parent="npc_containers" instance=ExtResource( 3 )]
+position = Vector2( 652, 140 )
+
+[node name="npc3" parent="npc_containers" instance=ExtResource( 3 )]
+position = Vector2( 1601, 634 )
+
+[node name="npc4" parent="npc_containers" instance=ExtResource( 3 )]
+position = Vector2( 669, 859 )
