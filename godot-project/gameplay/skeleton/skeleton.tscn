@@ -50,3 +50,18 @@ modulate = Color( 0.364706, 0.780392, 0.545098, 1 )
 position = Vector2( 0, 15 )
 scale = Vector2( 0.296875, 0.15625 )
 texture = ExtResource( 1 )
+
+[node name="hair" type="Node2D" parent="."]
+
+[node name="hair1" type="Sprite" parent="hair"]
+visible = false
+position = Vector2( 0, 15 )
+scale = Vector2( 0.296875, 0.15625 )
+texture = ExtResource( 1 )
+
+[node name="hair2" type="Sprite" parent="hair"]
+visible = false
+modulate = Color( 0.364706, 0.780392, 0.545098, 1 )
+position = Vector2( 0, 15 )
+scale = Vector2( 0.296875, 0.15625 )
+texture = ExtResource( 1 )
