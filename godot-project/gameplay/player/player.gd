@@ -3,6 +3,13 @@ extends KinematicBody2D
 
 export var speed = 500
 var can_swap = true
+var current_identity_index = -1
+var original_glboal_position
+
+
+func _ready():
+	original_glboal_position = global_position
+
 
 func _process(delta):
 	var velocity = Vector2.ZERO
@@ -37,7 +44,14 @@ func swap(npc):
 		add_child(npc_sprite)
 		
 		npc.go_back()
+		
+		current_identity_index = npc.get_index()
 
 
 func _on_timer_timeout():
 	can_swap = true
+
+
+func reset():
+	global_position = original_glboal_position
+	current_identity_index = -1

@@ -4,6 +4,7 @@ export var speed = 300
 var velocity = Vector2.ZERO
 
 func _ready():
+	print("NPC READY")
 	randomize()
 	
 	velocity.x = -50 + randi() % 100
