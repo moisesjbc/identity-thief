@@ -68,6 +68,7 @@ position = Vector2( 1.3113e-06, 1 )
 texture = ExtResource( 9 )
 
 [node name="mouth" type="Node2D" parent="."]
+position = Vector2( 0, -13 )
 
 [node name="mouth1" type="Sprite" parent="mouth"]
 visible = false
