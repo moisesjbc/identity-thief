@@ -31,4 +31,7 @@ text = "PLAYER"
 position = Vector2( -11.5, 17.75 )
 shape = SubResource( 1 )
 
+[node name="oof" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
 [connection signal="timeout" from="swap_timer" to="." method="_on_timer_timeout"]
