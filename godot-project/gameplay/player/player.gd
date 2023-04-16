@@ -7,6 +7,7 @@ var current_identity_index = -1
 var original_glboal_position
 var looking_left = true
 
+
 func _ready():
 	original_glboal_position = global_position
 
@@ -35,17 +36,17 @@ func _process(delta):
 	if collision and collision.collider.is_in_group("npc"):
 		swap(collision.collider)
 
-	
-
 
 func swap(npc):
 	if can_swap:
 		can_swap = false
+		$swap_timer.start()
+		$oof.play()
 		
 		var npc_sprite = npc.get_node("skeleton")
 		var player_sprite = get_node("skeleton")
 		
-		$swap_timer.start()
+		
 		npc.remove_child(npc_sprite)
 		remove_child(player_sprite)
 		
@@ -55,6 +56,8 @@ func swap(npc):
 		npc.go_back()
 		
 		current_identity_index = npc.get_index()
+		get_tree().get_root().get_node("statistics").n_swaps = get_tree().get_root().get_node("statistics").n_swaps + 1
+		print("SWAP to " + str(current_identity_index))
 
 
 func _on_timer_timeout():

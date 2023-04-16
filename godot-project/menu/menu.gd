@@ -15,8 +15,11 @@ func _ready():
 #func _process(delta):
 #	pass
 
+
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://gameplay/main/main.tscn")	
+	get_tree().get_root().get_node("music").play_button_select()
+	get_tree().change_scene("res://gameplay/main/main.tscn")
+
 
 func _on_ExitButton_pressed():
 	get_tree().quit()

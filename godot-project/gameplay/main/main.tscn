@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://gameplay/door/door.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gameplay/player/player.tscn" type="PackedScene" id=2]
@@ -6,19 +6,50 @@
 [ext_resource path="res://gameplay/main/main.gd" type="Script" id=4]
 [ext_resource path="res://gameplay/wall/wall.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gameplay/gui/right_panel.tscn" type="PackedScene" id=6]
-[ext_resource path="res://gameplay/gui/game_over/game_over.tscn" type="PackedScene" id=7]
-[ext_resource path="res://gameplay/main/background.png" type="Texture" id=8]
+[ext_resource path="res://gameplay/main/backgrounds/escenario1.png" type="Texture" id=7]
+[ext_resource path="res://gameplay/main/backgrounds/escenario4.png" type="Texture" id=8]
 [ext_resource path="res://gameplay/gui/timebar/timebar.tscn" type="PackedScene" id=9]
+[ext_resource path="res://gameplay/main/backgrounds/escenario5.png" type="Texture" id=10]
+[ext_resource path="res://gameplay/main/backgrounds/escenario3.png" type="Texture" id=11]
+[ext_resource path="res://gameplay/main/backgrounds/escenario6.png" type="Texture" id=12]
+[ext_resource path="res://gameplay/main/backgrounds/escenario2.png" type="Texture" id=13]
+[ext_resource path="res://gameplay/main/backgrounds.gd" type="Script" id=14]
 
 [node name="main" type="Node"]
 script = ExtResource( 4 )
 
 [node name="backgrounds" type="Node2D" parent="."]
+script = ExtResource( 14 )
 
 [node name="background_01" type="Sprite" parent="backgrounds"]
+visible = false
 position = Vector2( 736.5, 541 )
-scale = Vector2( 0.766146, 1 )
+texture = ExtResource( 7 )
+
+[node name="background_02" type="Sprite" parent="backgrounds"]
+visible = false
+position = Vector2( 736.5, 541 )
+texture = ExtResource( 13 )
+
+[node name="background_03" type="Sprite" parent="backgrounds"]
+visible = false
+position = Vector2( 736.5, 541 )
+texture = ExtResource( 11 )
+
+[node name="background_04" type="Sprite" parent="backgrounds"]
+visible = false
+position = Vector2( 736.5, 541 )
 texture = ExtResource( 8 )
+
+[node name="background_05" type="Sprite" parent="backgrounds"]
+visible = false
+position = Vector2( 736.5, 541 )
+texture = ExtResource( 10 )
+
+[node name="background_06" type="Sprite" parent="backgrounds"]
+visible = false
+position = Vector2( 736.5, 541 )
+texture = ExtResource( 12 )
 
 [node name="left_wall" parent="." instance=ExtResource( 5 )]
 visible = false
@@ -57,9 +88,6 @@ margin_bottom = 40.0
 [node name="right_panel" parent="gui" instance=ExtResource( 6 )]
 margin_left = 1437.0
 margin_right = 1882.0
-
-[node name="game_over" parent="gui" instance=ExtResource( 7 )]
-visible = false
 
 [node name="timebar" parent="gui" instance=ExtResource( 9 )]
 position = Vector2( 1496, 931 )

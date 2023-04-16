@@ -5,7 +5,6 @@ var velocity = Vector2.ZERO
 var looking_left = true
 
 func _ready():
-	print("NPC READY")
 	randomize()
 	
 	velocity.x = -50 + randi() % 100
