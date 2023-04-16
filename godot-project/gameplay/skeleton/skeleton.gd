@@ -6,6 +6,7 @@ var current_identity_id
 
 func _ready():
 	set_random_identity()
+	print(get_parent().name + " " + str(get_identity_id()))
 
 
 func clone_from(source_skeleton):
@@ -34,7 +35,6 @@ func set_identity_by_id(new_identity_id):
 	current_identity_id = new_identity_id
 	
 	var identity_tokens = current_identity_id.split("#")
-	print("SPLIT " + str(identity_tokens))
 	
 	for body_section_index in range(0, get_child_count()):
 		var body_section = get_child(body_section_index)
