@@ -35,3 +35,7 @@ func _on_sfx_button_toggled(button_pressed):
 
 func _on_music_button_toggled(button_pressed):
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), button_pressed)
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://credits_menu/credits_menu.tscn")
