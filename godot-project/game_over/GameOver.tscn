@@ -32,6 +32,24 @@ margin_top = 815.0
 margin_right = 1230.0
 margin_bottom = 965.0
 
+[node name="LevelCount" type="Label" parent="CenterContainer/TextureRect"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 0.294
+anchor_bottom = 0.101
+margin_left = 1005.0
+margin_top = 576.0
+margin_right = 485.52
+margin_bottom = 480.92
+rect_scale = Vector2( 3, 3 )
+
+[node name="SwapCount" type="Label" parent="CenterContainer/TextureRect"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 1117.0
+margin_top = 682.0
+margin_right = 1133.0
+margin_bottom = 696.0
+rect_scale = Vector2( 3, 3 )
+
 [node name="police_siren" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
