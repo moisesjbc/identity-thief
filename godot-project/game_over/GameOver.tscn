@@ -41,7 +41,6 @@ margin_top = 576.0
 margin_right = 485.52
 margin_bottom = 480.92
 rect_scale = Vector2( 3, 3 )
-percent_visible = -0.0666667
 
 [node name="SwapCount" type="Label" parent="CenterContainer/TextureRect"]
 modulate = Color( 0, 0, 0, 1 )
