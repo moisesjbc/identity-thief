@@ -5,7 +5,7 @@
 [ext_resource path="res://gameplay/npc_container/npc_container.tscn" type="PackedScene" id=3]
 [ext_resource path="res://gameplay/main/main.gd" type="Script" id=4]
 [ext_resource path="res://gameplay/wall/wall.tscn" type="PackedScene" id=5]
-[ext_resource path="res://gameplay/gui/right_panel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gameplay/gui/right_panel/right_panel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://gameplay/main/backgrounds/escenario1.png" type="Texture" id=7]
 [ext_resource path="res://gameplay/main/backgrounds/escenario4.png" type="Texture" id=8]
 [ext_resource path="res://gameplay/gui/timebar/timebar.tscn" type="PackedScene" id=9]
@@ -90,7 +90,7 @@ margin_left = 1437.0
 margin_right = 1882.0
 
 [node name="timebar" parent="gui" instance=ExtResource( 9 )]
-position = Vector2( 1496, 931 )
+position = Vector2( 1498, 879 )
 
 [connection signal="right_identity_reached_door" from="door" to="." method="_on_door_right_identity_reached_door"]
 [connection signal="wrong_identity_reached_door" from="door" to="." method="_on_door_wrong_identity_reached_door"]
