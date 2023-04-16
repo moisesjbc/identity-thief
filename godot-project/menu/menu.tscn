@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://menu/assets/menu.png" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://menu/assets/playButton.png" type="Texture" id=6]
 [ext_resource path="res://menu/assets/playButtonPressed.png" type="Texture" id=7]
 [ext_resource path="res://menu/assets/playButtonHover.png" type="Texture" id=8]
+[ext_resource path="res://menu/assets/howToButton.png" type="Texture" id=9]
+[ext_resource path="res://menu/assets/howToPressed.png" type="Texture" id=10]
+[ext_resource path="res://menu/assets/howToHover.png" type="Texture" id=11]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -46,10 +49,24 @@ texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
 
-[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer2"]
+[node name="CenterContainer3" type="CenterContainer" parent="MarginContainer/VBoxContainer2"]
 margin_top = 735.0
 margin_right = 889.0
 margin_bottom = 818.0
+
+[node name="HowToButton" type="TextureButton" parent="MarginContainer/VBoxContainer2/CenterContainer3"]
+margin_left = 110.0
+margin_right = 778.0
+margin_bottom = 83.0
+rect_min_size = Vector2( 40, 40 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer2"]
+margin_top = 848.0
+margin_right = 889.0
+margin_bottom = 931.0
 
 [node name="ExitButton" type="TextureButton" parent="MarginContainer/VBoxContainer2/CenterContainer2"]
 material = SubResource( 1 )
@@ -62,21 +79,7 @@ texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 5 )
 
-[node name="CenterContainer3" type="CenterContainer" parent="MarginContainer/VBoxContainer2"]
-margin_top = 848.0
-margin_right = 889.0
-margin_bottom = 931.0
-
-[node name="HowToButton" type="TextureButton" parent="MarginContainer/VBoxContainer2/CenterContainer3"]
-modulate = Color( 0.670588, 0.152941, 0.152941, 1 )
-self_modulate = Color( 0.698039, 0.105882, 0.105882, 1 )
-margin_left = 110.0
-margin_right = 778.0
-margin_bottom = 83.0
-rect_min_size = Vector2( 40, 40 )
-texture_normal = ExtResource( 8 )
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer3/HowToButton" to="." method="_on_HowToButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer3/HowToButton" to="." method="_on_HowToButton_pressed"]

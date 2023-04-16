@@ -26,4 +26,4 @@ func _on_ExitButton_pressed():
 	
 func _on_HowToButton_pressed():
 	print("hola")
-#	get_tree().change_scene("res://gameplay/main/main.tscn")
+	get_tree().change_scene("res://manual/Manual.tscn")
