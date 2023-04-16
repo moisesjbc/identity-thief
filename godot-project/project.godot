@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="godot-project"
+config/name="Identity thief"
 run/main_scene="res://menu/menu.tscn"
 config/icon="res://icon.png"
 
