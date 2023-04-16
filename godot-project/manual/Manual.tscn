@@ -21,10 +21,10 @@ margin_bottom = 1080.0
 texture = ExtResource( 4 )
 
 [node name="BackButton" type="TextureButton" parent="CenterContainer/TextureRect"]
-margin_left = 890.0
-margin_top = 972.0
-margin_right = 1027.0
-margin_bottom = 1053.0
+margin_left = 1771.0
+margin_top = 985.0
+margin_right = 1908.0
+margin_bottom = 1066.0
 rect_min_size = Vector2( 50, 50 )
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 3 )
