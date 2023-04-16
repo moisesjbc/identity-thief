@@ -2,8 +2,8 @@ extends Node
 
 
 var current_level = 0
-var target_identity_index = 0
-var current_total_time = 10
+var target_identity_id = 0
+var current_total_time = 30
 
 
 func _ready():
@@ -17,12 +17,11 @@ func set_current_level(new_level):
 	get_tree().get_root().get_node("statistics").n_levels = current_level
 
 	$npc_container.reset(5 + current_level)
-	target_identity_index = $npc_container.get_random_identity_index()
-	var target_identity_skeleton = $npc_container.get_identity_skeleton(target_identity_index)
+	target_identity_id = $npc_container.get_random_identity_id()
 	
-	$gui/right_panel.reset(current_level, target_identity_skeleton)
+	$gui/right_panel.reset(current_level, target_identity_id)
 	$player.reset()
-	$door.reset(target_identity_index)
+	$door.reset(target_identity_id)
 	$gui/timebar.reset(current_total_time)
 	$backgrounds.reset(current_level)
 

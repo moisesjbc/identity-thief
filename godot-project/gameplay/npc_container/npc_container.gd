@@ -16,8 +16,9 @@ func reset(n_npcs):
 		add_child(npc)
 
 
-func get_random_identity_index():
-	return randi() % get_child_count()
+func get_random_identity_id():
+	var random_identity_index = randi() % get_child_count()
+	return get_identity_skeleton(random_identity_index).get_identity_id()
 
 
 func get_identity_skeleton(identity_index):

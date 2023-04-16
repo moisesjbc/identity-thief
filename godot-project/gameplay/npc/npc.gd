@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends EntityWithIdentity
 
 export var speed = 300
 var velocity = Vector2.ZERO
@@ -29,3 +29,4 @@ func _process(delta):
 func go_back():
 	velocity.x = -velocity.x
 	velocity.y = -velocity.y
+

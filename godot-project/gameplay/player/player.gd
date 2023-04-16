@@ -1,9 +1,8 @@
-extends KinematicBody2D
+extends EntityWithIdentity
 
 
 export var speed = 500
 var can_swap = true
-var current_identity_index = -1
 var original_glboal_position
 var looking_left = true
 
@@ -43,21 +42,16 @@ func swap(npc):
 		$swap_timer.start()
 		$oof.play()
 		
-		var npc_sprite = npc.get_node("skeleton")
-		var player_sprite = get_node("skeleton")
-		
-		
-		npc.remove_child(npc_sprite)
-		remove_child(player_sprite)
-		
-		npc.add_child(player_sprite)
-		add_child(npc_sprite)
-		
 		npc.go_back()
 		
-		current_identity_index = npc.get_index()
+		var player_identity_id = get_identity_id()
+		var npc_identity_id = npc.get_identity_id()
+		
+		set_identity_by_id(npc_identity_id)
+		npc.set_identity_by_id(player_identity_id)
+		
 		get_tree().get_root().get_node("statistics").n_swaps = get_tree().get_root().get_node("statistics").n_swaps + 1
-		print("SWAP to " + str(current_identity_index))
+		print("SWAP to " + str(player_identity_id))
 
 
 func _on_timer_timeout():
@@ -66,4 +60,4 @@ func _on_timer_timeout():
 
 func reset():
 	global_position = original_glboal_position
-	current_identity_index = -1
+	set_random_identity()

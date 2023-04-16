@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "EntityWithIdentity",
+"language": "GDScript",
+"path": "res://globals/types/entity_with_identity.gd"
+} ]
+_global_script_class_icons={
+"EntityWithIdentity": ""
+}
+
 [application]
 
 config/name="godot-project"
