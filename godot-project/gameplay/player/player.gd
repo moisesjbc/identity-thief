@@ -60,4 +60,4 @@ func _on_timer_timeout():
 
 func reset():
 	global_position = original_glboal_position
-	set_random_identity()
+	set_identity_by_id("1#2#0#2")
