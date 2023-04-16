@@ -88,6 +88,22 @@ margin_bottom = 40.0
 [node name="right_panel" parent="gui" instance=ExtResource( 6 )]
 margin_left = 1437.0
 margin_right = 1882.0
+margin_bottom = 1040.0
+
+[node name="marco" parent="gui/right_panel" index="0"]
+position = Vector2( 227, 305 )
+
+[node name="banks" parent="gui/right_panel" index="1"]
+position = Vector2( 176, 683 )
+
+[node name="banks_label" parent="gui/right_panel" index="2"]
+margin_left = 307.0
+margin_top = 646.0
+margin_right = -25.0
+margin_bottom = -349.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "15"
+align = 1
 
 [node name="timebar" parent="gui" instance=ExtResource( 9 )]
 position = Vector2( 1498, 879 )
@@ -95,3 +111,5 @@ position = Vector2( 1498, 879 )
 [connection signal="right_identity_reached_door" from="door" to="." method="_on_door_right_identity_reached_door"]
 [connection signal="wrong_identity_reached_door" from="door" to="." method="_on_door_wrong_identity_reached_door"]
 [connection signal="timeout" from="gui/timebar" to="." method="_on_timebar_timeout"]
+
+[editable path="gui/right_panel"]

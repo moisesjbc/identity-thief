@@ -16,8 +16,9 @@ border_width_left = 50
 border_color = Color( 0.321569, 0.596078, 0.658824, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.321569, 0.596078, 0.658824, 1 )
 border_width_left = 50
-border_color = Color( 0.321569, 0.596078, 0.658824, 1 )
+border_color = Color( 1, 1, 1, 1 )
 shadow_color = Color( 1, 0, 0, 1 )
 shadow_offset = Vector2( 0, 50 )
 
