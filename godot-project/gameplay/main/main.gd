@@ -3,7 +3,7 @@ extends Node
 
 var current_level = 0
 var target_identity_id = 0
-var current_total_time = 30
+var current_total_time = 10
 
 
 func _ready():
