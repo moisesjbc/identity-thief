@@ -15,6 +15,7 @@ bus = "Music"
 
 [node name="gameplay" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+bus = "Music"
 
 [node name="button_select" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://menu/menu.gd" type="Script" id=1]
 [ext_resource path="res://menu/assets/menu.png" type="Texture" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://menu/assets/howToButton.png" type="Texture" id=9]
 [ext_resource path="res://menu/assets/howToPressed.png" type="Texture" id=10]
 [ext_resource path="res://menu/assets/howToHover.png" type="Texture" id=11]
+[ext_resource path="res://menu/assets/buttonSound.png" type="Texture" id=12]
+[ext_resource path="res://menu/assets/buttonSoundHover.png" type="Texture" id=13]
+[ext_resource path="res://menu/assets/buttonSoundPressed.png" type="Texture" id=14]
+[ext_resource path="res://menu/assets/buttonMusicPressed.png" type="Texture" id=15]
+[ext_resource path="res://menu/assets/buttonMusic.png" type="Texture" id=16]
+[ext_resource path="res://menu/assets/buttonMusicHover.png" type="Texture" id=17]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -79,7 +85,40 @@ texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 5 )
 
+[node name="sound_buttons_container" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -352.0
+margin_bottom = 174.0
+custom_constants/margin_right = 25
+custom_constants/margin_top = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="sound_buttons_container"]
+margin_top = 25.0
+margin_right = 327.0
+margin_bottom = 174.0
+custom_constants/separation = 20
+
+[node name="sfx_button" type="TextureButton" parent="sound_buttons_container/HBoxContainer"]
+margin_right = 149.0
+margin_bottom = 149.0
+toggle_mode = true
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 13 )
+
+[node name="music_button" type="TextureButton" parent="sound_buttons_container/HBoxContainer"]
+margin_left = 169.0
+margin_right = 318.0
+margin_bottom = 149.0
+toggle_mode = true
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 17 )
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer3/HowToButton" to="." method="_on_HowToButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="toggled" from="sound_buttons_container/HBoxContainer/sfx_button" to="." method="_on_sfx_button_toggled"]
+[connection signal="toggled" from="sound_buttons_container/HBoxContainer/music_button" to="." method="_on_music_button_toggled"]

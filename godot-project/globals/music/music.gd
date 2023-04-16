@@ -2,7 +2,6 @@ extends Node
 
 
 func _ready():
-	print("PLAYING MENU")
 	play_menu_music()
 
 

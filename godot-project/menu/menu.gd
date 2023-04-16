@@ -25,5 +25,13 @@ func _on_ExitButton_pressed():
 	get_tree().quit()
 	
 func _on_HowToButton_pressed():
-	print("hola")
 	get_tree().change_scene("res://manual/Manual.tscn")
+
+
+
+func _on_sfx_button_toggled(button_pressed):
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), button_pressed)
+
+
+func _on_music_button_toggled(button_pressed):
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), button_pressed)
