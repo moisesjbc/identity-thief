@@ -25,17 +25,21 @@ func _on_ExitButton_pressed():
 	get_tree().quit()
 	
 func _on_HowToButton_pressed():
+	get_tree().get_root().get_node("music").play_button_select()
 	get_tree().change_scene("res://manual/Manual.tscn")
 
 
 
 func _on_sfx_button_toggled(button_pressed):
+	get_tree().get_root().get_node("music").play_button_select()
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), button_pressed)
 
 
 func _on_music_button_toggled(button_pressed):
+	get_tree().get_root().get_node("music").play_button_select()
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), button_pressed)
 
 
 func _on_TextureButton_pressed():
+	get_tree().get_root().get_node("music").play_button_select()
 	get_tree().change_scene("res://credits_menu/credits_menu.tscn")

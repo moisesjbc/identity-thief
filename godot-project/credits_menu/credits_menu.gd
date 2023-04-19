@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_BackButton_pressed():
+	get_tree().get_root().get_node("music").play_button_select()
 	get_tree().change_scene("res://menu/menu.tscn")
