@@ -144,8 +144,8 @@ valign = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer3/HowToButton" to="." method="_on_HowToButton_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/CenterContainer2/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="toggled" from="sound_buttons_container/HBoxContainer/sfx_button" to="." method="_on_sfx_button_toggled"]
 [connection signal="toggled" from="sound_buttons_container/HBoxContainer/music_button" to="." method="_on_music_button_toggled"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
